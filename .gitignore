@@ -10,3 +10,7 @@ terraform.tfvars
 # SSH Keys
 terraform-key*
 *.pem
+
+
+# Generated reports
+*.csv
