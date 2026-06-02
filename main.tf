@@ -11,13 +11,13 @@ provider "aws" {
   region = "ap-south-1"
 }
 resource "aws_instance" "web" {
-  ami           = "ami-0f58b397bc5c1f2e8"
-  instance_type = var.instance_type
-  key_name = aws_key_pair.deployer.key_name
+  ami                    = "ami-0f58b397bc5c1f2e8"
+  instance_type          = var.instance_type
+  key_name               = aws_key_pair.deployer.key_name
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
-user_data = <<-EOF
+  user_data = <<-EOF
 #!/bin/bash
 apt update -y
 apt install -y apache2
