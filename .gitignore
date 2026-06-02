@@ -8,6 +8,5 @@
 terraform.tfvars
 
 # SSH Keys
-terraform-key
-terraform-key.pub
+terraform-key*
 *.pem
